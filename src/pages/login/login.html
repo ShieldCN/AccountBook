@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>登录</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<form (ngSubmit)="login(loginForm)">
+		<ion-list>
+			<ion-item>
+				<ion-label color="primary" floating>用户名</ion-label>
+				<ion-input type="text" ng-model="loginForm.username" clearInput></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label color="primary" floating>密　码</ion-label>
+				<ion-input type="password" ng-model="loginForm.password" clearInput></ion-input>
+			</ion-item>
+		</ion-list>
+		<div padding-horizontal>
+			<button ion-button block type="submit">登　录</button>
+		</div>
+	</form>
+</ion-content>

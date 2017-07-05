@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { TestPage } from '../pages/test/test';
+import { LoginPage } from '../pages/login/login';
+
 @Component({
 	templateUrl: 'app.html'
 })
@@ -12,7 +14,7 @@ export class MyApp {
 	@ViewChild(Nav) nav: Nav;
 
 	// make HelloIonicPage the root (or first) page
-	rootPage = HomePage;
+	rootPage = LoginPage;
 	pages: Array<{ title: string, component: any }>;
 
 	constructor(
