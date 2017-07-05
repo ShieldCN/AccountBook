@@ -18,11 +18,12 @@ export class LoginPage {
         public navCtrl: NavController
     ) {
         this.loginForm = {
-            username: 'yanxiaojun617',
-            password: '123456'
+            username: 'admin',
+            password: '1'
         };
     }
     login(user) {
+        console.log(user)
         this.http.get(`${APP_SERVE_URL}category`, user).map((res: Response) => res.json()).subscribe((res) => {
             console.log(res)
             //this.storage.set('UserInfo', userInfo);

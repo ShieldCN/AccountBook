@@ -9,11 +9,11 @@
 		<ion-list>
 			<ion-item>
 				<ion-label color="primary" floating>用户名</ion-label>
-				<ion-input type="text" ng-model="loginForm.username" clearInput></ion-input>
+				<ion-input type="text" name="username" [(ngModel)]="loginForm.username" clearInput></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label color="primary" floating>密　码</ion-label>
-				<ion-input type="password" ng-model="loginForm.password" clearInput></ion-input>
+				<ion-input type="password" name="password" [(ngModel)]="loginForm.password" clearInput></ion-input>
 			</ion-item>
 		</ion-list>
 		<div padding-horizontal>
