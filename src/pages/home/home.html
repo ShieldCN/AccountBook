@@ -1,13 +1,22 @@
 <ion-header>
-	<ion-navbar>
-		<button ion-button menuToggle>
+    <ion-navbar>
+        <!--<button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
-		</button>
-		<ion-title>My First List</ion-title>
-	</ion-navbar>
+		</button>-->
+        <ion-title>首页</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	this is a homePage
-	
+    <ion-list>
+        <ion-item-sliding *ngFor="let item of list">
+            <ion-item>
+                <p class="itemContent">{{item.name+"("+item.category+")"}} <em>{{item.date}}</em><b>{{item.price}}</b></p>
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button color="primary" (click)="edit(p)">编辑</button>
+                <button ion-button color="danger" (click)="remove(p)">删除</button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
 </ion-content>

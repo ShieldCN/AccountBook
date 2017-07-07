@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>{{isAdd?'添加类别':'编辑类别'}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<ion-label fixed color="primary">类别名称</ion-label>
+			<ion-input type="text" [(ngModel)]="itemData.name" readonly></ion-input>
+			<button ion-button color="primary" item-right (click)="openModal(itemData.name)">编辑</button>
+		</ion-item>
+	</ion-list>
+	<ion-list>
+		<ion-list-header>小类别</ion-list-header>
+		<ion-item *ngFor="let item of itemData.options">
+			<ion-label fixed color="primary">{{item.name}}</ion-label>
+			<button ion-button color="primary" item-right (click)="openOptionModal(item)">编辑</button>
+			<button ion-button color="danger" item-right (click)="openConfirm(item)">删除</button>
+		</ion-item>
+	</ion-list>
+</ion-content>

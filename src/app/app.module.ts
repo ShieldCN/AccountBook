@@ -28,6 +28,11 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { TestPage } from '../pages/test/test';
 import { TestItemPage } from '../pages/test-item/test-item';
+import {TabsPage} from "../pages/tabs/tabs";
+import {ItemPage} from "../pages/item/item";
+import {CategoryPage} from "../pages/category/category";
+import {CategoryItemPage} from "../pages/category/category-item";
+
 
 @NgModule({
 	declarations: [
@@ -35,7 +40,11 @@ import { TestItemPage } from '../pages/test-item/test-item';
 		HomePage,
 		TestPage,
 		TestItemPage,
-		LoginPage
+		LoginPage,
+		TabsPage,
+		ItemPage,
+		CategoryPage,
+		CategoryItemPage
 	],
 	imports: [
 		BrowserModule,
@@ -49,7 +58,11 @@ import { TestItemPage } from '../pages/test-item/test-item';
 		HomePage,
 		TestPage,
 		TestItemPage,
-		LoginPage
+		LoginPage,
+		TabsPage,
+		ItemPage,
+		CategoryPage,
+		CategoryItemPage
 	],
 	providers: [
 		StatusBar,

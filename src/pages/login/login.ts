@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { Response, Http } from "@angular/http";
-import { HomePage } from "../home/home";
+import {TabsPage} from "../tabs/tabs";
 
 import {APP_SERVE_URL} from "../../providers/Constants";
 @Component({
@@ -24,11 +24,11 @@ export class LoginPage {
     }
     login(user) {
         console.log(user)
-        this.http.get(`${APP_SERVE_URL}category`, user).map((res: Response) => res.json()).subscribe((res) => {
-            console.log(res)
+        //this.http.get(`${APP_SERVE_URL}category`, user).map((res: Response) => res.json()).subscribe((res) => {
+        //    console.log(res)
             //this.storage.set('UserInfo', userInfo);
-            this.navCtrl.setRoot(HomePage);
-        });
+            this.navCtrl.setRoot(TabsPage);
+        //});
     }
 
 

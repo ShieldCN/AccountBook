@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Item Details</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<ion-label fixed color="primary">类别</ion-label>
+			<ion-select [(ngModel)]="itemData.category" okText="确定" cancelText="取消">
+				<ion-option value="1">蔬菜</ion-option>
+				<ion-option value="2">水果</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed color="primary">名称</ion-label>
+			<ion-select [(ngModel)]="itemData.name" okText="确定" cancelText="取消">
+				<ion-option value="1">茄子</ion-option>
+				<ion-option value="2">白菜</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed color="primary">价格</ion-label>
+			<ion-input type="number" class="inputText" [(ngModel)]="itemData.price" clearInput></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed color="primary">日期</ion-label>
+			<ion-datetime displayFormat="YYYY-MM-DD hh:mm:ss" pickerFormat="M D hh mm ss" [(ngModel)]="itemData.date"></ion-datetime>
+		</ion-item>
+	</ion-list>
+	<div padding-horizontal>
+		<button ion-button block (click)="save">确定</button>
+	</div>
+</ion-content>
