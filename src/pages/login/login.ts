@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { Response, Http } from "@angular/http";
+// import { Response, Http } from "@angular/http";
 import {TabsPage} from "../tabs/tabs";
 
-import {APP_SERVE_URL} from "../../providers/Constants";
+// import {APP_SERVE_URL} from "../../providers/Constants";
 @Component({
     selector: 'page-login',
     templateUrl: 'login.html'
@@ -13,7 +13,7 @@ export class LoginPage {
     loginForm: any;
 
     constructor(
-        public http: Http,
+        // public http: Http,
         private storage: Storage,
         public navCtrl: NavController
     ) {

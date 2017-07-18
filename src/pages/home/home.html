@@ -14,8 +14,8 @@
                 <p class="itemContent">{{item.name+"("+item.category+")"}} <em>{{item.date}}</em><b>{{item.price}}</b></p>
             </ion-item>
             <ion-item-options side="right">
-                <button ion-button color="primary" (click)="edit(p)">编辑</button>
-                <button ion-button color="danger" (click)="remove(p)">删除</button>
+                <button ion-button color="primary" (click)="edit(item)">编辑</button>
+                <button ion-button color="danger" (click)="remove(item)">删除</button>
             </ion-item-options>
         </ion-item-sliding>
     </ion-list>

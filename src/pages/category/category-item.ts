@@ -50,7 +50,7 @@ export class CategoryItemPage {
                 {
                     name: 'name',
                     placeholder: '类别名称',
-                    value:name
+                    value: name
                 },
             ],
             buttons: [
@@ -62,7 +62,6 @@ export class CategoryItemPage {
                 {
                     text: '保存',
                     handler: data => {
-                        console.log(data)
                         this.saveCategoryName(data.name);
                     }
                 }
@@ -70,7 +69,59 @@ export class CategoryItemPage {
         });
         prompt.present();
     }
-    saveCategoryName(name){
-        this.itemData.name=name;
+    openOptionModal(item) {
+        let prompt = this.alertCtrl.create({
+            title: '修改',
+            inputs: [
+                {
+                    name: 'name',
+                    placeholder: '小类别名称',
+                    value: item.name
+                },
+            ],
+            buttons: [
+                {
+                    text: '取消',
+                    handler: data => {
+                    }
+                },
+                {
+                    text: '保存',
+                    handler: data => {
+                        this.saveSmallCategoryName(item.id, data.name);
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    }
+    saveCategoryName(name) {
+        this.itemData.name = name;
+    }
+    saveSmallCategoryName(id, name) {
+        var idx = this.itemData.options.findIndex(item => {
+            return item.id == id;
+        });
+        this.itemData.options[idx].name = name;
+    }
+    openConfirm(item) {
+        let confirm = this.alertCtrl.create({
+            title: '删除?',
+            message: `确定删除【${item.name}】?`,
+            buttons: [
+                {
+                    text: '取消',
+                    handler: () => {
+                    }
+                },
+                {
+                    text: '确定',
+                    handler: () => {
+                        console.log('delete');
+                    }
+                }
+            ]
+        });
+        confirm.present();
     }
 }

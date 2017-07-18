@@ -23,7 +23,7 @@ import { NativeService } from "../providers/NativeService";
 // import { Utils } from "../providers/Utils";
 // import { GlobalData } from "../providers/GlobalData";
 
-import { MyApp } from './app.component';
+import { AccountBook } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { TestPage } from '../pages/test/test';
@@ -36,7 +36,7 @@ import {CategoryItemPage} from "../pages/category/category-item";
 
 @NgModule({
 	declarations: [
-		MyApp,
+		AccountBook,
 		HomePage,
 		TestPage,
 		TestItemPage,
@@ -49,12 +49,12 @@ import {CategoryItemPage} from "../pages/category/category-item";
 	imports: [
 		BrowserModule,
 		HttpModule,
-		IonicModule.forRoot(MyApp),
+		IonicModule.forRoot(AccountBook),
 		IonicStorageModule.forRoot(),
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
-		MyApp,
+		AccountBook,
 		HomePage,
 		TestPage,
 		TestItemPage,

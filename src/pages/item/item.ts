@@ -8,18 +8,24 @@ import { NavController, NavParams } from 'ionic-angular';
 	templateUrl: 'item.html'
 })
 export class ItemPage {
-	selectedItem: any;
+	id: any;
 	itemData:any;
+	title:any;
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
-		// If we navigated to this page, we will have an item available as a nav param
 		let nowDate=new Date();
 		this.itemData={
 			name:"",
 			category:1,
+			sCategory:1,
 			price:"",
 			date:nowDate.toISOString()
 		}
-		this.selectedItem = navParams.get('item');
+		this.id = navParams.get('id');
+		if(this.id){
+			this.title="编辑";
+		}else{
+			this.title="添加";
+		}
 	}
 	save(){
 		

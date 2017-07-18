@@ -10,7 +10,7 @@ import { LoginPage } from '../pages/login/login';
 @Component({
 	templateUrl: 'app.html'
 })
-export class MyApp {
+export class AccountBook {
 	@ViewChild(Nav) nav: Nav;
 
 	// make HelloIonicPage the root (or first) page

@@ -1,6 +1,6 @@
 <ion-header>
 	<ion-navbar>
-		<ion-title>Item Details</ion-title>
+		<ion-title>{{title}}</ion-title>
 	</ion-navbar>
 </ion-header>
 
@@ -9,8 +9,16 @@
 		<ion-item>
 			<ion-label fixed color="primary">类别</ion-label>
 			<ion-select [(ngModel)]="itemData.category" okText="确定" cancelText="取消">
+				<ion-option value="1">食品</ion-option>
+				<ion-option value="2">电器</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed color="primary">小类别</ion-label>
+			<ion-select [(ngModel)]="itemData.sCategory" okText="确定" cancelText="取消">
 				<ion-option value="1">蔬菜</ion-option>
 				<ion-option value="2">水果</ion-option>
+				<ion-option value="3">零食</ion-option>
 			</ion-select>
 		</ion-item>
 		<ion-item>
